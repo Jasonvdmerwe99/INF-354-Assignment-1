@@ -1,0 +1,19 @@
+<table class="table table-striped" style="background-color: white;">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{course.name}}</td>
+        <td>{{course.duration}}</td>
+        <td>{{course.description}}</td>
+        <td><button type="button" class="btn btn-info" routerLink="/edit-course/{{course.courseId}}">Edit</button>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" style="margin-left: 0.5cm;" (click)="deleteCourse(course.courseId)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

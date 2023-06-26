@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <h1 class="mb-2">Edit your course</h1>
+    <form #form="ngForm" (ngSubmit)="UpdateCourse()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter name" [(ngModel)] = "EditCourseDetails.name">
+        </div>
+        <div class="form-group">
+            <label for="Duration">Duration</label>
+            <input type="text" class="form-control" id="duration" placeholder="Enter Duration" name="duration" [(ngModel)] = "EditCourseDetails.duration">
+          </div>
+        <div class="form-group">
+          <label for="Description">Description</label>
+          <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description" [(ngModel)] = "EditCourseDetails.description">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-danger" style="margin: 0.5cm;" routerLink="/courses">Cancel</button>
+      </form>
+    </div>
